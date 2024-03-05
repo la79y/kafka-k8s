@@ -13,8 +13,3 @@ Fique a vontade para contribuir abrindo _issues_ ou _pull requests_.
 ## Licença
 
 Este projeto está licensiado usando a MIT License - vejo o arquivo [LICENSE](../LICENSE) para detalhes.
-
-## Setup k8s dashboard
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.2.0/aio/deploy/recommended.yaml
-kubectl proxy
-http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
