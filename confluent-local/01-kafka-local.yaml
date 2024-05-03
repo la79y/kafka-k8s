@@ -88,12 +88,12 @@ spec:
           protocol: TCP
         resources:
           limits:
-            cpu: "1000m"
-            memory: 3000Mi
+            cpu: "2000m"
+            memory: 3584Mi
             ephemeral-storage: 100Gi
           requests:
-            cpu: "1000m"
-            memory: 3000Mi
+            cpu: "500m"
+            memory: 1024Mi
             ephemeral-storage: 100Gi
         securityContext:
           allowPrivilegeEscalation: false
