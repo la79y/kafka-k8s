@@ -76,6 +76,16 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.name
+        - name: KAFKA_LOG_CLEANUP_POLICY
+          value: "delete"
+        - name: KAFKA_LOG_RETENTION_MINUTES
+          value: "10"  # 10 minutes
+        - name: KAFKA_LOG_RETENTION_BYTES
+          value: "3221225472"  # 3GB
+        - name: KAFKA_OFFSETS_RETENTION_MINUTES
+          value: "10"  # 10 min
+        - name: KAFKA_OFFSETS_RETENTION_CHECK_INTERVAL_MS
+          value: "15"  # 15 min
         name: kafka
         image: docker.io/confluentinc/confluent-local:7.5.0
         imagePullPolicy: IfNotPresent
@@ -90,11 +100,11 @@ spec:
           limits:
             cpu: "2000m"
             memory: 3584Mi
-            ephemeral-storage: 100Gi
+            ephemeral-storage: 120Gi
           requests:
             cpu: "500m"
             memory: 1024Mi
-            ephemeral-storage: 100Gi
+            ephemeral-storage: 120Gi
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
