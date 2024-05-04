@@ -79,13 +79,13 @@ spec:
         - name: KAFKA_LOG_CLEANUP_POLICY
           value: "delete"
         - name: KAFKA_LOG_RETENTION_MINUTES
-          value: "10"  # 10 minutes
+          value: "30"  # 10 minutes
         - name: KAFKA_LOG_RETENTION_BYTES
           value: "3221225472"  # 3GB
         - name: KAFKA_OFFSETS_RETENTION_MINUTES
-          value: "10"  # 10 min
+          value: "30"  # 10 min
         - name: KAFKA_OFFSETS_RETENTION_CHECK_INTERVAL_MS
-          value: "15"  # 15 min
+          value: "30"  # 15 min
         name: kafka
         image: docker.io/confluentinc/confluent-local:7.5.0
         imagePullPolicy: IfNotPresent
